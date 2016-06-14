@@ -1,6 +1,4 @@
 ## myQuery
----
-
 #### About myQuery
 
 myQuery is a lightweight JavaScript library inspired by jQuery. It makes DOM traversal and element modification a cinch.
