@@ -9,7 +9,7 @@ $m(alert("Document loaded"))
 
 $m("p")
 
-var newP = document.create("p");
+var newP = document.createElement("p");
 newP.innerHTML("A new <p> tag.");
 $m(newP);
 ```
@@ -21,11 +21,11 @@ The `DOMNodeCollection` class is the workhorse of the myQuery library. It featur
 * `each` — iterate over the `DOMNodeCollection`. Takes care of slicing the non-iterable items elicited by a document query selector search. 
 * `on` – add a callback to the `DOMNodeCollection`. The parameters are `(eventName, callback)`.
 * `off` – remove all callbacks associated with a particular `(eventName)`.
-* `html`
-* `empty`
-* `append`
-* `remove`
-* `attr`
+* `html` – if given a string, the method changes the inner HTML of every node in the `DOMNodeCollection` to that string. Otherwise, the inner HTML of the first node is returned.
+* `empty` – empty the inner HTML of every node.
+* `append` – the argument can be a plain HTML element, string, or `DOMNodeCollection`. In any case, the argument content will be appended to every node in the present `DOMNodeCollection`.
+* `remove` – removes every node in the `DOMNodeCollection` from its parent.
+* `attr` – get or set tt
 * `addClass`
 * `removeClass`
 * `find`
