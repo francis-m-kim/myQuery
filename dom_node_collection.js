@@ -118,7 +118,7 @@ DOMNodeCollection.prototype = {
 
   parent: function() {
     var parentNodes = [];
-    this.each(function(node) {
+    this.each(function(node){
       parentNodes.push(node.parentNode);
     });
     return new DomNodeCollection(parentNodes);

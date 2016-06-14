@@ -1,4 +1,4 @@
-var DomNodeCollection = require("./dom_node_collection");
+var DOMNodeCollection = require("./dom_node_collection");
 
 var _docReadyCallbacks = [], _docReady = false;
 
@@ -13,7 +13,7 @@ function $m(arg) {
       break;
     case "object":
       if(arg instanceof HTMLElement) {
-        returnValue = new DomNodeCollection([arg]);
+        returnValue = new DOMNodeCollection([arg]);
       }
       break;
   }
@@ -82,7 +82,7 @@ function registerDocReadyCallback(callback) {
 
 function getNodesFromDom (selector){
   var nodes = [].slice.call(document.querySelectorAll(selector), 0);
-  return new DomNodeCollection(nodes);
+  return new DOMNodeCollection(nodes);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
